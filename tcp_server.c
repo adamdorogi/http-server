@@ -138,6 +138,7 @@ int main(int argc, char const *argv[])
         }
         else // Main process
         {
+            waitpid(-1, NULL, WNOHANG);
             close(client_socket);
         }
     }
